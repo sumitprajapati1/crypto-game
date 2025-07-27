@@ -45,7 +45,7 @@ curl https://crypto-game-30tf.onrender.com/api/wallet/transactions/68867c8e7bcde
 ```bash
 curl -X POST https://crypto-game-30tf.onrender.com/api/game/bet \
   -H "Content-Type: application/json" \
-  -d '{"userId": "68867c8e7bcde11804020af7", "amount": 100, "currency": "BTC"}'
+  -d '{"userId": "68867c8e7bcde11804020af7", "amount": 10, "currency": "BTC"}'
 ```
 
 ### Cash Out
