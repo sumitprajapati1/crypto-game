@@ -6,7 +6,7 @@
 ```bash
 curl -X POST http://localhost:3001/api/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"username": "testuser"}'
+  -d '{"username": "testinguser"}'
 ```
 
 ### Get User Profile
