@@ -2,7 +2,7 @@ import app from './app.js';
 import http from 'http';
 import setupWebSocket from './src/config/websocket.js';
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 console.log('DEBUG: PORT value is', PORT);
 
 const server = http.createServer(app);
