@@ -2,17 +2,17 @@
 
 ## Auth Routes
 
-### Register User
+<!-- ### Register User
 ```bash
-curl -X POST http://localhost:3001/api/auth/register \
+curl -X POST https://crypto-game-30tf.onrender.com/api/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"username": "testinguser"}'
+  -d '{"username": "testuser"}'
 ```
 
 ### Get User Profile
 ```bash
-curl http://localhost:3001/api/auth/profile/<userId>
-```
+curl https://crypto-game-30tf.onrender.com/api/auth/profile/68867c8e7bcde11804020af7
+``` -->
 
 ---
 
@@ -20,26 +20,26 @@ curl http://localhost:3001/api/auth/profile/<userId>
 
 ### Place a Bet
 ```bash
-curl -X POST http://localhost:3001/api/game/bet \
+curl -X POST https://crypto-game-30tf.onrender.com/api/game/bet \
   -H "Content-Type: application/json" \
-  -d '{"userId": "<userId>", "amount": 100, "currency": "BTC"}'
+  -d '{"userId": "68867c8e7bcde11804020af7", "amount": 100, "currency": "BTC"}'
 ```
 
 ### Cash Out
 ```bash
-curl -X POST http://localhost:3001/api/game/cashout \
+curl -X POST https://crypto-game-30tf.onrender.com/api/game/cashout \
   -H "Content-Type: application/json" \
-  -d '{"userId": "<userId>"}'
+  -d '{"userId": "68867c8e7bcde11804020af7"}'
 ```
 
 ### Get Current Game State
 ```bash
-curl http://localhost:3001/api/game/state
+curl https://crypto-game-30tf.onrender.com/api/game/state
 ```
 
 ### Get Game History
 ```bash
-curl http://localhost:3001/api/game/history?limit=10
+curl https://crypto-game-30tf.onrender.com/api/game/history?limit=10
 ```
 
 ---
@@ -48,19 +48,19 @@ curl http://localhost:3001/api/game/history?limit=10
 
 ### Get Wallet Balance
 ```bash
-curl http://localhost:3001/api/wallet/balance/<userId>?currency=BTC
+curl https://crypto-game-30tf.onrender.com/api/wallet/balance/<userId>?currency=BTC
 ```
 
 ### Deposit Funds
 ```bash
-curl -X POST http://localhost:3001/api/wallet/deposit \
+curl -X POST https://crypto-game-30tf.onrender.com/api/wallet/deposit \
   -H "Content-Type: application/json" \
   -d '{"userId": "<userId>", "currency": "BTC", "amount": 0.01}'
 ```
 
 ### Get Transaction History
 ```bash
-curl http://localhost:3001/api/wallet/transactions/<userId>?limit=20&type=deposit
+curl https://crypto-game-30tf.onrender.com/api/wallet/transactions/<userId>?limit=20&type=deposit
 ```
 
 ---
@@ -69,17 +69,17 @@ curl http://localhost:3001/api/wallet/transactions/<userId>?limit=20&type=deposi
 
 ### Test Route
 ```bash
-curl http://localhost:3001/api/crypto/test
+curl https://crypto-game-30tf.onrender.com/api/crypto/test
 ```
 
 ### Get Crypto Price
 ```bash
-curl http://localhost:3001/api/crypto/price/BTC
+curl [https://crypto-game-30tf.onrender.com/api/crypto/price/BTC
 ```
 
 ### Get All Crypto Prices
 ```bash
-curl http://localhost:3001/api/crypto/prices
+curl https://crypto-game-30tf.onrender.com/api/crypto/prices
 ```
 
 ### Convert USD to Crypto
@@ -91,12 +91,12 @@ curl -X POST http://localhost:3001/api/crypto/convert/usd-to-crypto \
 
 ### Convert Crypto to USD
 ```bash
-curl -X POST http://localhost:3001/api/crypto/convert/crypto-to-usd \
+curl -X POST https://crypto-game-30tf.onrender.com/api/crypto/convert/crypto-to-usd \
   -H "Content-Type: application/json" \
   -d '{"cryptoAmount": 0.01, "currency": "BTC"}'
 ```
 
 ### Get Supported Currencies
 ```bash
-curl http://localhost:3001/api/crypto/currencies
+curl https://crypto-game-30tf.onrender.com/api/crypto/currencies
 ``` 
