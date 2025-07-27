@@ -16,6 +16,29 @@ curl https://crypto-game-30tf.onrender.com/api/auth/profile/68867c8e7bcde1180402
 
 ---
 
+## Wallet Routes
+
+### Get Wallet Balance
+```bash
+curl https://crypto-game-30tf.onrender.com/api/wallet/balance/68867c8e7bcde11804020af7?currency=BTC
+```
+
+### Deposit Funds
+```bash
+curl -X POST https://crypto-game-30tf.onrender.com/api/wallet/deposit \
+  -H "Content-Type: application/json" \
+  -d '{"userId": "68867c8e7bcde11804020af7", "currency": "BTC", "amount": 0.01}'
+```
+
+### Get Transaction History
+```bash
+curl https://crypto-game-30tf.onrender.com/api/wallet/transactions/68867c8e7bcde11804020af7?limit=20&type=deposit
+```
+
+---
+
+---
+
 ## Game Routes
 
 ### Place a Bet
@@ -42,29 +65,6 @@ curl https://crypto-game-30tf.onrender.com/api/game/state
 curl https://crypto-game-30tf.onrender.com/api/game/history?limit=10
 ```
 
----
-
-## Wallet Routes
-
-### Get Wallet Balance
-```bash
-curl https://crypto-game-30tf.onrender.com/api/wallet/balance/<userId>?currency=BTC
-```
-
-### Deposit Funds
-```bash
-curl -X POST https://crypto-game-30tf.onrender.com/api/wallet/deposit \
-  -H "Content-Type: application/json" \
-  -d '{"userId": "<userId>", "currency": "BTC", "amount": 0.01}'
-```
-
-### Get Transaction History
-```bash
-curl https://crypto-game-30tf.onrender.com/api/wallet/transactions/<userId>?limit=20&type=deposit
-```
-
----
-
 ## Crypto Routes
 
 ### Test Route
@@ -74,7 +74,7 @@ curl https://crypto-game-30tf.onrender.com/api/crypto/test
 
 ### Get Crypto Price
 ```bash
-curl [https://crypto-game-30tf.onrender.com/api/crypto/price/BTC
+curl https://crypto-game-30tf.onrender.com/api/crypto/price/BTC
 ```
 
 ### Get All Crypto Prices
